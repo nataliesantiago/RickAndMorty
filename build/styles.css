@@ -1,0 +1,219 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-size: 16px; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+ul li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.navbar {
+  background-color: #000000; }
+  .navbar.navbar-light .navbar-nav {
+    display: flex;
+    align-items: center;
+    padding: 20px; }
+    .navbar.navbar-light .navbar-nav .nav-item {
+      margin-right: 2%; }
+    .navbar.navbar-light .navbar-nav .nav-link {
+      color: #ffffff;
+      font-weight: 600; }
+      .navbar.navbar-light .navbar-nav .nav-link:hover {
+        color: #e6b54a; }
+    .navbar.navbar-light .navbar-nav .active .nav-link {
+      color: #E7E5DF;
+      font-weight: bold; }
+
+.container-home {
+  height: calc(100vh - 60px);
+  width: 100%; }
+  .container-home img {
+    width: 100%;
+    height: 100%; }
+
+.all-characters h2 {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2%; }
+
+.all-characters .characters-grid {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin: 2% auto 1%; }
+  .all-characters .characters-grid .character__content {
+    width: 24%;
+    text-decoration: none;
+    margin-bottom: 2%;
+    padding: 1%;
+    transition: all 0.2s;
+    overflow: hidden; }
+    .all-characters .characters-grid .character__content:hover {
+      -webkit-box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.41);
+      -moz-box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.41);
+      box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.41); }
+      .all-characters .characters-grid .character__content:hover .character__info .name {
+        color: #ffffff;
+        font-weight: bold; }
+      .all-characters .characters-grid .character__content:hover .character .show-more {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        visibility: visible; }
+    .all-characters .characters-grid .character__content .character {
+      position: relative;
+      transition: all 0.2s; }
+      .all-characters .characters-grid .character__content .character img {
+        width: 100%;
+        height: auto; }
+      .all-characters .characters-grid .character__content .character__info {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(57, 62, 65, 0.3);
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .all-characters .characters-grid .character__content .character__info .name {
+          color: #ffffff;
+          font-weight: bold;
+          font-family: 1.125em; }
+      .all-characters .characters-grid .character__content .character .show-more {
+        position: absolute;
+        top: -100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; }
+        .all-characters .characters-grid .character__content .character .show-more img {
+          width: 20%;
+          height: 20%; }
+        .all-characters .characters-grid .character__content .character .show-more p {
+          color: #000000; }
+
+.all-characters .pagination-characters {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-bottom: 3%; }
+  .all-characters .pagination-characters .paginator {
+    display: flex;
+    align-items: center; }
+    .all-characters .pagination-characters .paginator__item {
+      width: 60px;
+      height: 50px;
+      margin: 0 5%;
+      cursor: pointer; }
+
+.container-character {
+  width: 80%;
+  margin: 5% auto;
+  display: flex;
+  align-items: flex-start; }
+  .container-character .character__image {
+    margin-right: 4%; }
+  .container-character .character__info {
+    width: 60%; }
+    .container-character .character__info h1 {
+      margin-bottom: 5%; }
+    .container-character .character__info .info__general {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2%; }
+      .container-character .character__info .info__general p {
+        margin-right: 5%; }
+        .container-character .character__info .info__general p span {
+          font-weight: 900; }
+    .container-character .character__info .episodes h2 {
+      margin-bottom: 2%; }
+    .container-character .character__info .episodes__list {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap; }
+      .container-character .character__info .episodes__list a {
+        width: 15%;
+        height: 35px;
+        line-height: 35px;
+        background-color: #393E41;
+        color: #e6b54a;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 0.875em;
+        margin-bottom: 2%;
+        margin-right: 1%; }
+        .container-character .character__info .episodes__list a:hover {
+          color: #ffffff; }
+
+.container-episode {
+  margin: 5% 0; }
+  .container-episode .episode__image {
+    width: 50%;
+    margin: 0 auto 3%; }
+  .container-episode .episode__info {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center; }
+    .container-episode .episode__info p {
+      margin-bottom: 1%; }
+      .container-episode .episode__info p span {
+        font-weight: 600; }
+
+@media screen and (max-width: 768px) {
+  .navbar.navbar-light .navbar-nav {
+    padding: 30px; }
+    .navbar.navbar-light .navbar-nav .nav-item {
+      margin-right: 5%; }
+  .all-characters .characters-grid {
+    justify-content: flex-start; }
+    .all-characters .characters-grid .character__content {
+      width: 30%;
+      margin: 1%; }
+  .container-character {
+    flex-direction: column; }
+    .container-character .character__image {
+      margin-right: 0;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10%; }
+    .container-character .character__info {
+      width: 100%; }
+      .container-character .character__info .episodes__list a {
+        width: 32%; }
+  .container-episode .episode__image {
+    width: 80%; } }
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .container-home {
+    height: calc(100vh - 78px);
+    background-color: #000000;
+    display: flex;
+    align-items: center; }
+    .container-home img {
+      height: auto; }
+  .all-characters .characters-grid .character__content {
+    width: 48%; }
+  .container-episode .episode__image {
+    width: 80%; }
+    .container-episode .episode__image img {
+      width: 100%; } }
+
